@@ -1,0 +1,39 @@
+<!--
+Prog No:10
+Prog Name: Write a Bubble sort algorithm, take input from user
+Date:4/12/2020
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Assignment10</title>
+		<h2>BUBBLE SORT IMPLEMENT</h2>
+    <input type = "button" onclick = "bblsort()" value = "BUBBLE"/>
+	</head>
+	<body style="font-size:50px">
+		<script language="javascript" text="text/javascript">
+			 function bblsort()
+        {
+            var n,arr=[],i,j;
+            n=Number(prompt("enter the size of array"));
+            for(i=0;i<n;i++)
+            {
+            arr[i]=parseFloat(prompt("enter the element"));
+            }
+            for(i=0;i<n;i++)
+            {
+                for(j=0;j<(n-i-1);j++)
+                {
+                    if(arr[j]>arr[j+1])
+                    {
+                    var temp=arr[j];
+                    arr[j]=arr[j+1];
+                    arr[j+1]=temp;
+                    }
+                }
+            }
+            document.write("bubble sorting of the array ",arr)
+        }
+		</script>
+	</body>
+</html>
